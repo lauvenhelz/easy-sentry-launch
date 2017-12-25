@@ -4,8 +4,8 @@ redis:
 postgres:
   image: postgres:9.6.5
   environment:
-    - POSTGRES_USER:sentry
-    - POSTGRES_PASSWORD:sentry
+    - POSTGRES_USER:postgres
+    - POSTGRES_PASSWORD:postgres
   volumes:
    - /var/data/sentry/postgres:/var/lib/postgresql/data
 

@@ -14,7 +14,7 @@
 
 1. It is the initial start of Sentry container, so DB sync is needed, run:
 
-    ```docker-compose sentry upgrade```
+    ```docker-compose run sentry upgrade```
 
 1. While running this command user creation will be offered. Set your email and pass to access Sentry.
 
