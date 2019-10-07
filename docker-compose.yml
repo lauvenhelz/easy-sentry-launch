@@ -1,8 +1,8 @@
 redis:
-  image: redis:4.0.2
+  image: redis:5.0.6
 
 postgres:
-  image: postgres:9.6.5
+  image: postgres:12.0
   environment:
     - POSTGRES_USER:postgres
     - POSTGRES_PASSWORD:postgres
@@ -10,7 +10,7 @@ postgres:
    - /var/data/sentry/postgres:/var/lib/postgresql/data
 
 sentry:
-  image: sentry:8.20.0
+  image: sentry:9.1.2
   links:
    - redis
    - postgres
@@ -20,7 +20,7 @@ sentry:
     - sentry-variables.env
 
 sentry-cron:
-  image: sentry:8.20.0
+  image: sentry:9.1.2
   links:
    - redis
    - postgres
@@ -29,7 +29,7 @@ sentry-cron:
     - sentry-variables.env
 
 sentry-worker-1:
-  image: sentry:8.20.0
+  image: sentry:9.1.2
   links:
    - redis
    - postgres
